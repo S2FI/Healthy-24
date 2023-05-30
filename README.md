@@ -6,6 +6,8 @@ The decision to omit Redux was driven by the absence of requirements necessitati
 
 By employing Sass and selectively adopting technologies like Redux, the project exemplifies a pragmatic approach to enhancing code maintainability and efficiency while balancing the project's specific needs.
 
+You can find this project deployed on firebase : https://healthy-24.web.app/ or https://healthy-24.firebaseapp.com/
+
 In the project directory, you can run:
 
 ### `npm install .` 
