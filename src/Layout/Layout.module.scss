@@ -1,0 +1,10 @@
+@import "./../styles/_variables.scss";
+
+.container {
+    height: calc(auto - #{$headerHeight});
+    background: $bg;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,268 @@
+@import "../../styles/variables";
+
+.About{
+    width: 100%;
+    margin-top: $margin-md;
+    display: flex;
+    flex-direction: column;
+    padding: $padding-md;
+    overflow: hidden;
+    @include breakpoint(md) {
+        padding:$padding-lg;
+        margin-top: $margin-lg;
+      }
+      //************************************* Information bracket**********************************
+      &__informations{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        
+        @include breakpoint(md) {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        &__text{
+            font-size: 16px;
+            font-family: $Roboto;
+            text-align: $text-al;
+
+            @include breakpoint(md) {
+                width: 50%;
+                font-size: 18px;
+              }
+            p{
+                padding-top: 1.5rem;
+            }
+            &__header {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                font-size: 25px;     
+                font-family: $Poppins;
+                font-weight: 600;
+
+                img {
+                    padding-left: 0.5rem;
+                    padding-bottom: 0.3rem;
+                    width: 160px;
+                }
+                @include breakpoint(md) {
+                    font-size: 35px; 
+                    img {
+                        padding-left: 1rem;
+                        padding-bottom: 0.2rem;
+                        width:auto;
+                    }
+                }
+        }
+        }
+        
+        &__bgImage {
+            
+            width: 300px;
+            margin-top: 2rem;
+            @include breakpoint(md) {
+                width:auto;
+            }
+        }
+        
+      }
+      //************************************* recommandation bracket**********************************
+      &__recommandation{
+        margin-top: $margin-md;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        
+        @include breakpoint(md) {
+            margin-top: $margin-lg;
+            display: flex;
+            flex-direction: row;     
+        }
+        &__text{
+            font-size: 16px;
+            font-family: $Poppins;
+            text-align: $text-al;
+
+            @include breakpoint(md) {
+                width: 50%;
+                margin-left: 6rem;
+                font-size: 18px;
+              }
+              // Why choosing text
+            p{
+                padding-top: 1.5rem;
+                a {
+                    
+                    color: inherit;
+                    padding: 0.1rem 0.2rem;
+                    border-radius: 3px;
+                    
+                    &:hover {
+                        background: rgba($primary, 0.2);
+                    }
+                    &:active {
+                        border-radius:3px;
+                        background: linear-gradient(rgba($primary, 0.2), rgba($primary, 0.3));
+                    }
+                }
+            }
+            &__header {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                font-size: 20px;  
+                font-weight: 600;   
+                margin-top: 1rem;
+                img {
+                    padding-left: 0.5rem;
+                    padding-bottom: 0.3rem;
+                    width: 160px;
+                }
+                @include breakpoint(md) {
+                    font-size: 35px; 
+                    img {
+                        padding-left: 1rem;
+                        padding-bottom: 0.2rem;
+                        width:auto;
+                    }
+                }
+        }
+
+
+        &__list{
+            margin-top: 2rem;
+            ul{
+                list-style: none;
+                font-size: 16px;
+                padding: 0;
+                
+            }
+            &__icons {
+                color: #F27219;
+                margin-right: 2rem;
+            }
+        }
+        }
+
+        &__bgImage {
+            
+            width: 300px;
+            
+            @include breakpoint(md) {
+                width:auto;
+            }
+        }        
+    }
+    //************************************* APP bracket**********************************
+    &__app{
+        background-color: $cardBlue;
+        margin-top:$margin-md;
+        padding: 3rem 0rem;
+        box-shadow: 0 0 0 100vmax $cardBlue;
+        color: $light;
+        clip-path: inset(0 -100vmax);
+        display: flex;
+        flex-direction: row;
+        
+        @include breakpoint(md) {
+            margin-top:$margin-lg;
+        padding: 3rem 7.5rem;
+        }
+        &__text{
+            // less than 786px
+            align-items: flex-start;
+            h1{
+                font-family: $Sora;
+                font-weight: 600;
+                font-size: 15px;
+            }
+            h5 {
+                font-family: $Poppins;
+                font-size: 13px;
+                font-weight: 300!important;
+            }
+            p{
+                font-size: 10px;
+                font-weight: 200;
+                width: 90%;
+            }
+
+            //more than 768px
+            @include breakpoint(md) {
+                h1{
+                    font-family: $Sora;
+                    font-weight: 600;
+                    font-size: 32px;
+                }
+                h5 {
+                    font-family: $Poppins;
+                    font-size: 24px;
+                    font-weight: 300!important;
+                }
+                p{
+                    font-size: 14px;
+                    font-weight: 200;
+                    width: 75%;
+                }
+            }
+        
+        
+    }
+        &__icons{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            @include breakpoint(md) {
+                
+            }
+            
+            &__logo{
+                display: flex;
+            flex-direction: column;
+            img{
+                width: 120px;
+                margin: 0.1rem 0rem
+            }
+            @include breakpoint(md) {
+                display: flex;
+            flex-direction: row;
+            img{
+                width: 150px;
+                margin: 0rem 0.1rem;
+            }
+            }
+            }
+            &__stars{
+                font-size: 12px;
+                font-weight: 600;
+                margin-top: 1rem;
+
+                img{
+                    margin-left: 0.5rem;
+                    width: 80px;
+                }
+                @include breakpoint(md) {
+                    font-size: 20px;
+                font-weight: 600;
+                margin-top: 1rem;
+                img{
+                    margin-left: 1rem;
+                    width: 130px;
+                }
+                
+                }
+            }
+            p{
+                font-size: 10px;
+                @include breakpoint(md) {
+                    font-size: 14px;
+                }
+            }
+    }
+    
+    }
+
+}

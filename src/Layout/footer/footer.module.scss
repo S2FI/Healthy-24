@@ -1,0 +1,15 @@
+@import "../../styles/variables";
+.footer{
+    font-size: 14px;
+    border: 1px solid $grey;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: hidden;
+    p{
+        margin-top: 5rem;
+        margin-left: 4rem;
+    }
+
+}

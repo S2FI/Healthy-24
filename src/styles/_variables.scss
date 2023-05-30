@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Poppins:wght@100;200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Poppins:wght@100;200;300;400&family=Roboto:ital,wght@0,300;0,400;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Poppins:wght@100;200;300;400&family=Roboto:ital,wght@0,300;0,400;1,100&family=Sora:wght@500;600&display=swap');
+
+// fonts
+$Poppins: "Poppins", sans-serif;
+$Inter: "Inter", sans-serif;
+$Roboto: "Roboto", sans-serif;
+$Sora: "Sora", sans-serif;
+
+
+$text-al: left;
+
+// images
+$monitor-width: 100%;
+
+// colors
+$dark: #000000;
+$light: #fff;
+$primary: #3C88C3;
+$blue: #0B65A7;
+$cardBlue:#005EA3;
+$bg: #FFFFFF;
+$grey: #C4C4C4;
+$orange:#F27219;
+$gridGrey:#F4F7FA;
+// spacing
+$spacing-md: 16px;
+$spacing-lg: 32px;
+
+$padding-md: 0rem 3rem;
+$padding-lg: 0rem 6rem;
+
+$margin-md:3rem;
+$margin-lg:8rem;
+
+// border radius
+$borderRadius: 12px;
+
+// header height
+$headerHeight: 100px;
+
+@mixin breakpoint($point) {
+    @if $point == md {
+        // 768px
+        @media (min-width: 48em) {
+            @content;
+        }
+    }
+}
+
+@mixin full-width-image {
+    width: $monitor-width;
+    max-width: 100%;
+  }

@@ -1,0 +1,110 @@
+@import "../../styles/variables";
+
+$monitor-width: 1920px;
+.Home {
+    background: $bg;
+    position: relative;
+    
+    @include breakpoint(md) {
+        display: inline;
+      }
+    &__bgImage {
+      @include full-width-image;
+    }
+    &__text {
+      position: absolute;
+      top: 8vw; /* Adjust the desired top position */
+      padding-left: 3rem;
+      transition: 0.3s ease;
+  
+      @include breakpoint(md) {
+        top: 8vw;
+        padding-left:6rem;
+
+      }
+
+      &__first{
+        font-size: 3vw;
+        font-weight: 400;
+        @include breakpoint(md) {          
+            font-size: 3vw;
+            font-weight: 400;
+          }
+      }
+
+      &__second{
+        display: flex;
+        flex-direction: row;
+        font-size: 3vw;
+        font-weight: 400;
+        @include breakpoint(md) {          
+            font-size: 3vw;
+            font-weight: 400;
+          }
+          &__health {
+            font-weight: 600;
+            color: $blue;
+            padding-left: 1vw;
+          }
+      }
+      
+      &__third{
+        padding-top: 1rem;
+        padding-bottom: 2vw;
+        font-size: 1.5vw;
+        font-weight: 400;
+        max-width: 60%;
+        @include breakpoint(md) {   
+            padding-top: 1.3rem;
+            padding-bottom: 5vw;       
+            font-size: 1.1vw;
+            font-weight: 400;
+            max-width: 80%;
+          }
+      }
+      
+      button {     
+        background-color: $orange;
+        border: none;
+        width: 10vw;
+        height: 4vw;
+        font-size: 1.2vw;
+        color: $light;
+        &:hover {
+            background: rgba($orange, 0.8);
+        }
+        &:active {
+            border-radius: 3px;
+            background: linear-gradient(rgba($orange ,0.8), rgba($orange, 0.9));
+        }
+
+        @include breakpoint(md) {   
+            width: 8.563vw;
+            height: 3vw;
+            font-size: 1vw;
+          }
+
+      }
+    }
+  
+    @include breakpoint(md) {
+      max-height: 716px;
+      width: 100%;
+    }
+
+
+    &__cards {
+        display: flex;
+        @include breakpoint(md) {   
+            padding-top: 0rem;
+            position: absolute;
+            left: 18vw;
+            top:38vw;
+            display: flex;
+            flex-direction: row;
+            
+
+          }
+
+    }
+  }
